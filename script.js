@@ -5,11 +5,12 @@ function mincost(arr)
 	let totalCost = 0;
 
 	while (arr.length  > 1) {
-		arr.sort((a,b) => a - b);
-		arr.splice(0, 2);
-		const cost = arr[0] + arr[1];
-		totalCost += cost;
-		arr.push(cost;)
+		 arr.sort((a, b) => a - b);        // Sort ascending
+        const first = arr.shift()!;       // Pick Smallest
+        const second = arr.shift()!;      // Pick Second smallest
+        const cost = first + second;
+        totalCost += cost;
+        arr.push(cost); 
 	}
 	
 	return totalCost;
