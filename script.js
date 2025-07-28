@@ -11,6 +11,7 @@ function mincost(arr)
 		totalCost += cost;
 		arr.push(cost;)
 	}
+	
 	return totalCost;
 }
 
